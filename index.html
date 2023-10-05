@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        background: whitesmoke;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="game"></div>
+      <div style="margin: 20px auto 0; text-align: center; width: 480px">
+        <button
+          type="button"
+          onmousedown="moveup()"
+          onmouseup="clearmove()"
+          ontouchstart="moveup()"
+        >
+          UP
+        </button>
+        <br />
+        <br />
+        <button
+          type="button"
+          onmousedown="movedown()"
+          onmouseup="clearmove()"
+          ontouchstart="movedown()"
+        >
+          DOWN
+        </button>
+      </div>
+    </div>
+    <script src="letter.js"></script>
+    <script src="component.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
